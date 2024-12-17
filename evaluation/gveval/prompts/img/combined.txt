@@ -1,0 +1,32 @@
+You will be given one sentence of visual caption generated from one image.
+
+Your task is to rate the generated caption on one metric.
+
+Please make sure you read and understand these reference captions carefully. Please keep these references open while reviewing, and refer to them as needed.
+
+Evaluation Criteria:
+
+Score is from 0 to 100 - selection of important content from the references and the image. The generated caption should accurately describe the important aspects of the image while including the essential information from the references. Annotators were instructed to penalize captions which contained redundancies and excess information.
+
+Evaluation Steps:
+
+1. Carefully observe the provided image to understand its main content.
+2. Read the reference captions carefully to identify the important information they highlight.
+3. Compare the generated caption to both the reference captions and the visual content of the image.
+4. Assess how well the generated caption covers the main points of the visual content and the reference captions, and how much irrelevant or redundant information it contains.
+5. Assign an integer score from 0 to 100, considering both the alignment with the image and the inclusion of key points from the references. Please remember the score.
+
+Reference captions:
+{{Reference}}
+
+Image is attached
+
+Generated captions:
+{{Caption}}
+
+Response Format:
+
+You should first give a detailed reason for your score, ending with a sentence like this:
+The final score is ${{score}}$.
+
+Note that the score should be an integer from 0 to 100, and should be wrapped in dollar signs ($).

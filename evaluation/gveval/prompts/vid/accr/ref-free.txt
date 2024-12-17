@@ -1,0 +1,42 @@
+You will be given one sentence of visual caption generated from a complete video. For evaluation purposes, you are provided with a single image that contains three concatenated frames from the video. These frames are meant to represent key moments from the video but do not encompass the entire content.
+
+Your task is to rate the generated caption on one metric.
+
+Evaluation Criteria:
+
+Score is from 0 to 100 - selection of important content from the video frames. The generated caption should accurately describe the important aspects of the video as represented by these key frames. Annotators were instructed to penalize captions which contained redundancies and excess information.
+
+Evaluation Dimensions:
+
+Accuracy: Does the caption correctly describe the entities and actions shown in the video without errors or hallucinations?
+Completeness: Does the caption cover all significant events and aspects of the video, including dynamic actions and possible scene transitions?
+Conciseness: Is the caption clear and succinct, avoiding unnecessary details and repetition?
+Relevance: Is the caption pertinent to the video content, without including irrelevant information or questions?
+
+Evaluation Steps: 
+1. Carefully examine the provided image, noting that it includes three distinct frames labeled as Frame 1, Frame 2, and Frame 3.
+2. Read the generated caption.
+    1. Carefully read the generated caption that needs to be evaluated.
+3. Compare the generated caption with the reference captions and assess how well it captures the essence of the video.
+4. Assess how well the generated caption covers the main points of the visual content, and how much irrelevant or redundant information it contains.
+5. Check for the inclusion of irrelevant details or the omission of significant elements.
+6. Assign an integer scor from 0 to 100 for the caption based on the following dimensions:
+    - Accuracy: Does the caption correctly describe the entities and actions shown in the video without errors or hallucinations?
+    - Completeness: Does the caption cover all significant events and aspects of the video, including dynamic actions and possible scene transitions?
+    - Conciseness: Is the caption clear and succinct, avoiding unnecessary details and repetition?
+    - Relevance: Is the caption pertinent to the video content, without including irrelevant information or questions?
+
+Generated Caption:
+{{Caption}}
+
+You should first give detailed reason for your scores, and ending with sentence for each score like this:
+..... The Accuracy score is α{{accuracy_score}}α.
+..... The Completeness score is β{{completeness_score}}β.
+..... The Conciseness score is ψ{{conciseness_score}}ψ.
+..... The Relevance score is δ{{relevance_score}}δ.
+
+Note that the score should be an integer from 0 to 100, and should be wrapped in the corresponding Greek alphabet.
+Wrap Accuracy score in α
+Wrap Completeness score in β
+Wrap Conciseness score in ψ
+Wrap Relevance score in δ 

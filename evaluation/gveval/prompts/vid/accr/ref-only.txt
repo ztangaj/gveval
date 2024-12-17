@@ -1,0 +1,47 @@
+You will be given a caption generated for a short video segment.
+
+Your task is to rate the generated caption based on its accuracy in capturing the essential content of the video as described in the reference captions.
+
+Evaluation Criteria:
+
+Score is from 0 to 100 - The generated caption should accurately reflect the content in the reference captions and appropriately describe the key actions or events visible in the video. Annotators should penalize captions that include irrelevant details or omit significant elements indicated in the reference captions and the video.
+
+Evaluation Dimensions:
+
+Accuracy: Does the caption correctly describe the entities and actions shown in the video without errors or hallucinations?
+Completeness: Does the caption cover all significant events and aspects of the video, including dynamic actions and possible scene transitions?
+Conciseness: Is the caption clear and succinct, avoiding unnecessary details and repetition?
+Relevance: Is the caption pertinent to the video content, without including irrelevant information or questions?
+
+Evaluation Steps: 
+1. Examine the provided reference captions carefully.
+    1. Read the full reference captions that describe the overall video content or specific actions.
+    2. Review each reference caption thoroughly to understand what aspects of the video they highlight.
+2. Read the generated caption.
+    1. Carefully read the generated caption that needs to be evaluated.
+3. Compare the generated caption with the reference captions and assess how well it captures the essence of the video.
+4. Evaluate how accurately and completely the generated caption describes the events and entities shown in the video.
+5. Check for the inclusion of irrelevant details or the omission of significant elements.
+6. Assign an integer scor from 0 to 100 for the caption based on the following dimensions:
+    - Accuracy: Does the caption correctly describe the entities and actions shown in the video without errors or hallucinations?
+    - Completeness: Does the caption cover all significant events and aspects of the video, including dynamic actions and possible scene transitions?
+    - Conciseness: Is the caption clear and succinct, avoiding unnecessary details and repetition?
+    - Relevance: Is the caption pertinent to the video content, without including irrelevant information or questions?
+
+Reference Captions:
+{{Reference}}
+
+Generated Caption:
+{{Caption}}
+
+You should first give detailed reason for your scores, and ending with sentence for each score like this:
+..... The Accuracy score is α{{accuracy_score}}α.
+..... The Completeness score is β{{completeness_score}}β.
+..... The Conciseness score is ψ{{conciseness_score}}ψ.
+..... The Relevance score is δ{{relevance_score}}δ.
+
+Note that the score should be an integer from 0 to 100, and should be wrapped in the corresponding Greek alphabet.
+Wrap Accuracy score in α
+Wrap Completeness score in β
+Wrap Conciseness score in ψ
+Wrap Relevance score in δ 

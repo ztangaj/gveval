@@ -1,0 +1,8 @@
+You are trying to tell if a candidate set of captions is describing the same image as a reference set of captions.
+Candidate set:
+{{Caption}}
+Reference set:
+{{Reference}}
+On a precise scale from 0 to 100, how likely is it that the candidate set is \
+describing the same image as the reference set? (JSON format, with a key "score", \
+value between 0 and 100, and a key "reason" with a string value.)

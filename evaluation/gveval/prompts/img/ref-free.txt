@@ -1,0 +1,24 @@
+You will be given one sentence of visual caption generated from one image.
+
+Your task is to rate the generated caption on one metric.
+
+Evaluation Criteria:
+
+Score is from 0 to 100 - selection of important content from the image. The generated caption should accurately describe the important aspects of the image. Annotators were instructed to penalize captions which contained redundancies and excess information.
+
+Evaluation Steps:
+
+1. Carefully observe the image provided.
+2. Identify the main points of the visual content in the image.
+3. Assess how well the generated caption covers the main points of the visual content, and how much irrelevant or redundant information it contains.
+4. Assign an integer score from 0 to 100, please remember it.
+
+Generated captions:
+{{Caption}}
+
+Response Format:
+
+You should first give detailed reason for your score, and ending with sentence like this:
+The final score is ${{score}}$.
+
+Note that the score should be an integer from 0 to 100, and should be wrapped in the dollar signs ($).
